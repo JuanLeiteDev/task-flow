@@ -4,18 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestor de tarefas</title>
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
-
+        <h1>Gestor de tarefas</h1>
+        <button class="fa-solid fa-bars menu-botao preto"></button>
     </header>
+    <aside>
+        <div>
+            <h2>Menu</h2>
+            <button class="fa-solid fa-bars menu-botao branco"></button>
+        </div>
+        <menu>
+            <div class="bloco-listar">
+                <label for="listar"><i class="fa-solid fa-magnifying-glass"></i></label>
+                <input type="text" name="listar" id="listar" placeholder="Pesquisar tarefa">
+            </div>
+            <ul>
+                <a href="#" class="link-menu">
+                    <li>Criar</li>
+                </a>
+                <a href="#" class="link-menu">
+                    <li>Listar</li>
+                </a>
+                <a href="#" class="link-menu">
+                    <li>Apagar</li>
+                </a>
+            </ul>
+        </menu>
+    </aside>
     <main>
-
+        <p>Main</p>
     </main>
     <footer>
-        <p>&copy; 2026 Juan Lucas Souza Leite. Todos os direitos reservados. </p>
+        <p>Juan Lucas Souza Leite</p>
+        <p>&copy; 2026 - Todos os direitos reservados</p>
+        <div class="icones">
+            <a href="https://wa.me/+351914095001" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://github.com/JuanLeiteDev" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/juan-leite-7b61923ab" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:juanleite048@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+        </div>
     </footer>
-    <script src="static/js/script.js"></script>
+    <script src="../static/js/script.js"></script>
 </body>
 </html>
