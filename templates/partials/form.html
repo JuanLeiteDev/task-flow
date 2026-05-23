@@ -5,24 +5,34 @@
     <div class="campo">
         <label for="titulo">Título</label>
         <input 
+            class="{% if erros.titulo %}input-erro{% endif %}"
             type="text" 
             name="titulo" 
+            value="{{ dados.get('titulo', '')}}"
             id="titulo" 
             required 
             maxlength="20" 
             placeholder="Ex: Estudar"
         >
+        {% if erros.titulo %}
+            <p class="erro">{{ erros.titulo }}</p>
+        {% endif %}
     </div>
 
     <div class="campo">
         <label for="desc">Descrição</label>
         <textarea 
+            class="{% if erros.descricao %}input-erro{% endif %}"
             name="desc" 
+            value={{ dados.get('desc', '') }}
             id="desc" 
             maxlength="200" 
             rows="4" 
             placeholder="Descreva a tarefa"
-        ></textarea>
+        >{{ dados.get('desc', '') }}</textarea>
+        {% if erros.descricao %}
+            <p class="erro">{{ erros.descricao }}</p>
+        {% endif %}
     </div>
 
     <div class="campo">
@@ -45,16 +55,28 @@
     <div class="grupo-duplo">
         <div class="campo">
             <label for="status">Estado atual</label>
-            <select name="status" id="status">
+            <select name="status" id="status" class="{% if erros.estado %}input-erro{% endif %}">
                 <option value="Pendente" selected>Pendente</option>
-                <option value="Atrasada">Atrasada</option>
-                <option value="Concluída">Concluída</option>
+                <option value="Atrasada"{% if dados.get('status') == 'Atrasada'%}selected{% endif %}>Atrasada</option>
+                <option value="Concluída"{% if dados.get('status') == 'Concluída'%}selected{% endif %}>Concluída</option>
             </select>
+            {% if erros.estado %}
+                <p class="erro">{{ erros.estado }}</p>
+            {% endif %}
         </div>
 
         <div class="campo">
             <label for="limite">Data limite</label>
-            <input type="date" name="limite" id="limite">
+            <input 
+                type="date" 
+                name="limite" 
+                id="limite" 
+                value={{ dados.get('date', '') }}
+                class="{% if erros.data %}input-erro{% endif %}"
+            >
+            {% if erros.data %}
+                <p class="erro">{{ erros.data }}</p>
+            {% endif %}
         </div>
     </div>
 
