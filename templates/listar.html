@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block header %}
+    {% include "partials/header.html" %}
+{% endblock header %}
+
+{% block sidebar %}
+    {% include "partials/sidebar.html" %}
+{% endblock sidebar %}
+
+{% block content %}
+    {% with tarefas=tarefas.atrasadas %}
+        {% include "partials/lista_tarefas.html" %}
+    {% endwith %}
+
+    {% with tarefas=tarefas.pendentes %}
+        {% include "partials/lista_tarefas.html" %}
+    {% endwith %}
+
+    {% with tarefas=tarefas.concluidas %}
+        {% include "partials/lista_tarefas.html" %}
+    {% endwith %}
+{% endblock content %}
+
+{% block footer %}
+    {% include "partials/footer.html" %}
+{% endblock footer %}
