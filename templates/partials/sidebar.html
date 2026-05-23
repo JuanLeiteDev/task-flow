@@ -1,0 +1,20 @@
+<aside class="oculto">
+    <div>
+        <h2>Menu</h2>
+        <button class="fa-solid fa-bars menu-botao branco"></button>
+    </div>
+    <menu>
+        <div class="bloco-listar">
+            <label for="listar"><i class="fa-solid fa-magnifying-glass"></i></label>
+            <input type="text" name="listar" id="listar" placeholder="Pesquisar tarefa">
+        </div>
+        <ul>
+            <a href="{{ url_for('criar') }}" class="link-menu">
+                <li>Criar</li>
+            </a>
+            <a href="{{ url_for('listar') }}" class="link-menu">
+                <li>Listar</li>
+            </a>
+        </ul>
+    </menu>
+</aside>

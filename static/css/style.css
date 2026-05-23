@@ -11,8 +11,8 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
     outline: none;
+    box-sizing: border-box;
 }
 
 html {
@@ -31,7 +31,6 @@ body {
 /* ================= HEADER ================= */
 header {
     color: var(--cor1);
-    backdrop-filter: blur(1px);
     position: sticky;
     top: 0;
     padding: 15px 30px;
@@ -39,6 +38,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    background-color: white;
 }
 
 header > h1 {
@@ -71,7 +71,7 @@ aside {
     flex-flow: column nowrap;
     justify-content: start;
     align-items: start;
-    background-color: var(--cor1);
+    background-color: rgb(14, 13, 13, 1);
     z-index: 1000;
     transition: all 300ms ease-in-out;
 }
@@ -82,6 +82,10 @@ aside > div {
     display: flex;
     justify-content: space-between;
     align-content: center;
+}
+
+aside > div > h2 {
+    margin-top: 5px;
 }
 
 .branco {
@@ -115,15 +119,84 @@ menu > ul > a {
     margin: 10px;
 }
 
+menu > ul > a:hover {
+    color: var(--cor2);
+}
+
 aside.oculto {
     right: -70%;
 }
 
 /* ================= MAIN ================= */
 main {
+    padding: 10px;
+    color: black;
     flex: 1 0 auto;
     text-align: center;
-    height: 2000px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-content: center;
+}
+
+/* =========== BLOCO DE TAREFAS =========== */
+.tarefa {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 20px;
+    background-color: var(--cor2);
+    border-radius: 10px;
+    margin: 10px 0;
+    color: white;
+    transition: all 300ms ease;
+}
+
+.tarefa:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+}
+
+.tarefa > .titulo {
+    display: grid;
+    grid-template: auto / 3fr 1fr;
+    justify-items: start;
+    align-items: start;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--cor1);
+    color: white;
+    margin: -20px -20px 20px -20px;
+}
+
+.titulo > div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: start;
+    gap: 8px;
+}
+
+.titulo > div > h3 {
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+.titulo > div > .tag {
+    align-self: flex-start;
+    font-size: 0.8rem;
+    text-align: left;
+    padding: 7px 17px;
+    border-radius: 20px;
+    border: 1px solid var(--cor2);
+    background-color: rgb(46, 70, 71);
+    color: white;
+}
+
+.tarefa > .descricao {
+    text-align: justify;
 }
 
 /* ================= FOOTER ================= */
