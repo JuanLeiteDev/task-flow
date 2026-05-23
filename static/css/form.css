@@ -1,0 +1,113 @@
+#formulario {
+    margin: 20px 20px;
+    padding: 28px;
+    background: var(--cor1);
+    color: var(--branco);
+    border: 1px solid rgba(166, 249, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(166, 249, 255, 0.08);
+}
+
+#formulario div {
+    margin-bottom: 18px;
+}
+
+#formulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--cor2);
+}
+
+#formulario input,
+#formulario select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    background: var(--fundo-input);
+    color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+#formulario input::placeholder {
+    color: var(--cinza);
+}
+
+#formulario input:focus,
+#formulario select:focus {
+    border-color: var(--cor2);
+    box-shadow: 0 0 0 3px rgba(166, 249, 255, 0.15);
+}
+
+#formulario button {
+    width: 100%;
+    padding: 13px 16px;
+    margin-top: 8px;
+    background: var(--cor2);
+    color: var(--cor1);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+#formulario button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 5px rgba(166, 249, 255, 0.1);
+}
+
+#formulario button:active {
+    transform: translateY(0);
+    opacity: 0.85;
+}
+
+#formulario input[type="date"] {
+    color-scheme: dark;
+}
+
+#formulario h2 {
+    margin-bottom: 24px;
+    color: var(--branco);
+    text-align: center;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.grupo-duplo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+#formulario textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    padding: 12px 14px;
+    background: var(--fundo-input);
+    color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    font-family: inherit;
+}
+
+#formulario textarea:focus {
+    border-color: var(--cor2);
+    box-shadow: 0 0 0 3px rgba(166, 249, 255, 0.15);
+}
+
+@media (max-width: 600px) {
+    .grupo-duplo {
+        grid-template-columns: 1fr;
+    }
+}
