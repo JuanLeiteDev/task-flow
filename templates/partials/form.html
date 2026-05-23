@@ -1,0 +1,85 @@
+<form action="/criar" method="post" autocomplete="off" id="formulario">
+
+    <h2>Criar nova tarefa</h2>
+
+    <div class="campo">
+        <label for="titulo">Título</label>
+        <input 
+            class="{% if erros.titulo %}input-erro{% endif %}"
+            type="text" 
+            name="titulo" 
+            value="{{ dados.get('titulo', '')}}"
+            id="titulo" 
+            required 
+            maxlength="20" 
+            placeholder="Ex: Estudar"
+        >
+        {% if erros.titulo %}
+            <p class="erro">{{ erros.titulo }}</p>
+        {% endif %}
+    </div>
+
+    <div class="campo">
+        <label for="desc">Descrição</label>
+        <textarea 
+            class="{% if erros.descricao %}input-erro{% endif %}"
+            name="desc" 
+            value={{ dados.get('desc', '') }}
+            id="desc" 
+            maxlength="200" 
+            rows="4" 
+            placeholder="Descreva a tarefa"
+        >{{ dados.get('desc', '') }}</textarea>
+        {% if erros.descricao %}
+            <p class="erro">{{ erros.descricao }}</p>
+        {% endif %}
+    </div>
+
+    <div class="campo">
+        <label for="cat">Categoria</label>
+        <input 
+            list="categorias" 
+            id="cat" 
+            name="cat" 
+            placeholder="Escolha ou escreva uma categoria"
+        >
+
+        <datalist id="categorias">
+            <option value="Educação"></option>
+            <option value="Trabalho"></option>
+            <option value="Lazer"></option>
+            <option value="Notas"></option>
+        </datalist>
+    </div>
+
+    <div class="grupo-duplo">
+        <div class="campo">
+            <label for="status">Estado atual</label>
+            <select name="status" id="status" class="{% if erros.estado %}input-erro{% endif %}">
+                <option value="Pendente" selected>Pendente</option>
+                <option value="Atrasada"{% if dados.get('status') == 'Atrasada'%}selected{% endif %}>Atrasada</option>
+                <option value="Concluída"{% if dados.get('status') == 'Concluída'%}selected{% endif %}>Concluída</option>
+            </select>
+            {% if erros.estado %}
+                <p class="erro">{{ erros.estado }}</p>
+            {% endif %}
+        </div>
+
+        <div class="campo">
+            <label for="limite">Data limite</label>
+            <input 
+                type="date" 
+                name="limite" 
+                id="limite" 
+                value={{ dados.get('date', '') }}
+                class="{% if erros.data %}input-erro{% endif %}"
+            >
+            {% if erros.data %}
+                <p class="erro">{{ erros.data }}</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <button id="botao-criar" type="submit">Criar tarefa</button>
+
+</form>
