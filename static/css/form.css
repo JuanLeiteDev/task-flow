@@ -106,6 +106,16 @@
     box-shadow: 0 0 0 3px rgba(166, 249, 255, 0.15);
 }
 
+.input-erro {
+    border: 1px solid #ff6b6b !important;
+}
+
+.erro {
+    margin-top: 6px;
+    color: #ff6b6b;
+    font-size: 0.85rem;
+}
+
 @media (max-width: 600px) {
     .grupo-duplo {
         grid-template-columns: 1fr;
