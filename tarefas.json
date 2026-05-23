@@ -1,32 +1,16 @@
 {
+    "categorias": [],
     "pendentes": [
         {
-            "id": 0,
-            "titulo": "Sistemas Operativos",
-            "descricao": "Estudar para a apresentação do trabalho do shell feito em c",
-            "inicio": "x",
-            "fim": "x",
+            "titulo": "ok",
+            "descricao": "",
+            "categoria": "",
+            "inicio": "23/05/2026",
+            "fim": "Sem data limite",
             "estado": "Pendente"
         }
     ],
-    "concluidas": [
-        {
-            "id": 0,
-            "titulo": "Sistemas Operativos",
-            "descricao": "Estudar para a apresentação do trabalho do shell feito em c",
-            "inicio": "x",
-            "fim": "x",
-            "estado": "Concluída"
-        }
-    ],
-    "atrasadas": [
-        {
-            "id": 0,
-            "titulo": "Sistemas Operativos",
-            "descricao": "Estudar para a apresentação do trabalho do shell feito em c",
-            "inicio": "x",
-            "fim": "x",
-            "estado": "Atrasada"
-        }
-    ]
+    "concluidas": [],
+    "atrasadas": [],
+    "outras": []
 }
