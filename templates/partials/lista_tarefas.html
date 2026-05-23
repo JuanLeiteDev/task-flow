@@ -1,0 +1,16 @@
+{% if tarefas %}
+    {% for tarefa in tarefas %}
+        <article class="tarefa">
+            <div class="titulo">
+                <div>
+                    <h3>{{ tarefa.titulo }}</h3>
+                    <p class="tag">{{ tarefa.estado }}</p>
+                </div>
+                <p class="data">{{ tarefa.inicio }} - {{ tarefa.fim }}</p>
+            </div>
+            <div class="descricao">
+                <p>{{ tarefa.descricao }}</p>
+            </div>
+        </article>
+    {% endfor %}
+{% endif %}
