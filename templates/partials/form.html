@@ -42,7 +42,11 @@
             id="cat" 
             name="cat" 
             placeholder="Escolha ou escreva uma categoria"
+            maxlength="30"
         >
+        {% if erros.categoria %}
+            <p class="erro">{{ erros.categoria }}</p>
+        {% endif %}
 
         <datalist id="categorias">
             <option value="Educação"></option>
