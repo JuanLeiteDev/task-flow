@@ -3,7 +3,10 @@
         <article class="tarefa">
             <div class="titulo">
                 <div>
-                    <h3>{{ tarefa.titulo }}</h3>
+                    <div class="apagar">
+                        <h3>{{ tarefa.titulo }}</h3>
+                        <button class="fa-solid fa-xmark botao-apagar" data-id="{{ tarefa.id }}"></button>
+                    </div>
                     <p class="tag">{{ tarefa.estado }}</p>
                 </div>
                 <p class="data">{{ tarefa.inicio }} - {{ tarefa.fim }}</p>

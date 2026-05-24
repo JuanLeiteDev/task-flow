@@ -9,15 +9,15 @@
 {% endblock sidebar %}
 
 {% block content %}
-    {% with tarefas=tarefas.atrasadas %}
+    {% with tarefas=tarefas_atrasadas %}
         {% include "partials/lista_tarefas.html" %}
     {% endwith %}
 
-    {% with tarefas=tarefas.pendentes %}
+    {% with tarefas=tarefas_pendentes %}
         {% include "partials/lista_tarefas.html" %}
     {% endwith %}
 
-    {% with tarefas=tarefas.concluidas %}
+    {% with tarefas=tarefas_concluidas %}
         {% include "partials/lista_tarefas.html" %}
     {% endwith %}
 {% endblock content %}
@@ -25,3 +25,7 @@
 {% block footer %}
     {% include "partials/footer.html" %}
 {% endblock footer %}
+
+{% block notificacao %}
+    {% include "partials/confirmacao.html" %}
+{% endblock notificacao %}
