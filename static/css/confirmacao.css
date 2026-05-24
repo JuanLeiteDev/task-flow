@@ -1,0 +1,68 @@
+.confirmacao {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+
+    width: min(90%, 400px);
+    background-color: white;
+    color: #222;
+
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+    padding: 16px;
+
+    transition: all 300ms ease;
+}
+
+.confirmacao.oculto-notify {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -20px);
+}
+
+.confirmacao-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.confirmacao-conteudo p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.confirmacao-botoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+#confirmar-apagar {
+    background-color: #c62828;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+
+#confirmar-apagar:hover {
+    background-color: #851b1b;
+}
+
+#cancelar-apagar {
+    background-color: #ddd;
+    color: #222;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+
+#cancelar-apagar:hover {
+    background-color: #8d8d8d;
+}
